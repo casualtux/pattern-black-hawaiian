@@ -1,102 +1,18 @@
+=== FAT STROKE ===
 
-   19  git clone https://github.com/casualtux/casualtux-hawaiian.git
-   20  git clone https://github.com/casualtux/casualtux-hibiscus.git
-   21  git clone https://github.com/casualtux/casualtux.git
-   22  git clone https://github.com/casualtux/cth-hibiscus3.git
-   23  git clone https://github.com/casualtux/cth-hibiscus2.git
-   24  git clone https://github.com/casualtux/cth-hibiscus1.git
-   25  git clone https://github.com/casualtux/cth-leaf3.git
-   26  git clone https://github.com/casualtux/cth-leaf2.git
-   27  git clone https://github.com/casualtux/cth-leaf1.git
-   28  git clone https://github.com/casualtux/yorsplat.git
-   29  git clone https://github.com/casualtux/yorflower.git
-  256  mkdir original1
-  257  cp original/hibiscus-white.svg original1/
-  258  gedit original1/hibiscus-white.svg &
-  259  grep radialGradient38329-5-0-8-6 original/hibiscus-white.svg 
-  260  ls
-  261  nedit hibiscus-white.svg original1/hibiscus-white.svg &
-  292  grep linearGradient6719 CasualTux-Hawaiian-Bright2.svg 
-  293  grep -n linearGradient6719 CasualTux-Hawaiian-Bright2.svg 
-  294  grep -A 2 -B 2 linearGradient6719 CasualTux-Hawaiian-Bright2.svg 
-  295  grep linearGradient6719 CasualTux-Hawaiian-Bright2.svg | wc -l
-  296  grep -A 1 -B 1 linearGradient6719 CasualTux-Hawaiian-Bright2.svg 
-  297  grep -A 1 -B 1 linearGradient6719 CasualTux-Hawaiian-Bright2.svg | grep radial
-  298  grep -A 1 -B 1 linearGradient6719 CasualTux-Hawaiian-Bright2.svg | grep radial | wc -l
-  299  grep linearGradient6719 CasualTux-Hawaiian-Bright2.svg | wc -l
-  300  grep -A 1 -B 1 linearGradient6719 CasualTux-Hawaiian-Bright2.svg | grep radial | awk -F'"' '{print $2}'
-  301  grep -A 1 -B 1 linearGradient6719 CasualTux-Hawaiian-Bright2.svg | grep radial | awk -F'"' '{print $2}' >> red.radial
-  302  grep radialGradient38093-9-5-16-2 CasualTux-Hawaiian-Bright2.svg
-  303  grep radialGradient38093-9-5-16-2 CasualTux-Hawaiian-Bright2.svg | sed "s/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#990033/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/"
-  304  grep radialGradient38093-9-5-16-2 CasualTux-Hawaiian-Bright2.svg | sed "s/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#990033/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" | grep ffffff
-  305  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" >> red.test; done
-  306  wc -l red*
-  307  grep ffffff red.test | wc l
-  308  grep ffffff red.test | wc -l
-  309  grep -v id= red.test >> red.test.trimm
-  310  wc red.*
-  311  grep -v ffffff red.test.trimm >> red.test.fail
-  312  cat red.test.fail 
-  313  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" | sed "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" >> red.test2; done
-  314  grep ffffff red.test2 | wc -l
-  315  grep stroke-width:9 CasualTux-Hawaiian-Bright2.svg | wc -l
-  316  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" | sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  317  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg | sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  318  grep stroke:#ffffff CasualTux-Hawaiian-Bright2.svg | wc -l
-  319  grep stroke:#ffffff CasualTux-Hawaiian-Bright.svg | wc -l
-  320  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg  ; done
-  321  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  322  grep stroke:#ffffff CasualTux-Hawaiian-Bright.svg | wc -l
-  323  grep stroke:#ffffff CasualTux-Hawaiian-Bright2.svg | wc -l
-  324  stroke:#990033 CasualTux-Hawaiian-Bright2.svg | wc -l
-  325  grep stroke:#990033 CasualTux-Hawaiian-Bright2.svg | wc -l
-  326  grep stroke:#990033 CasualTux-Hawaiian-Bright.svg | wc -l
-  327  cc0022
-  328  sed -i "s/stroke:#990033/stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg
-  329  ls
-  330  inkscape CasualTux-Hawaiian-Bright2.svg &
-  331  ls
-  332  cp CasualTux-Hawaiian-Bright.svg CasualTux-Hawaiian-Bright2.svg
-  333  sed -i "s/stroke:#990033;stroke-width:1/stroke:#990033;stroke-width:9/" CasualTux-Hawaiian-Bright2.svg
-  334  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg  ; done
-  335  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  336  sed -i "s/stroke:#990033/stroke:#cc0022/" CasualTux-Hawaiian-Bright2.svg
-  337  inkscape CasualTux-Hawaiian-Bright2.svg &
-  344  cp CasualTux-Hawaiian-Bright2.svg CasualTux-Hawaiian-Bright.svg
-  345  cp CasualTux-Hawaiian-Bright2.svg CasualTux-Hawaiian-Fade.svg
-  346  cp CasualTux-Hawaiian-Bright2.svg CasualTux-Hawaiian-Multi.svg
-  347  ls
-  348  diff -u CasualTux-Hawaiian-Bright2.svg CasualTux-Hawaiian-Bright.svg
-  349  rm -f CasualTux-Hawaiian-Bright2.svg
-  350  ls
-  351  gmail CasualTux-Hawaiian-Fade.svg CasualTux-Hawaiian-Multi.svg CasualTux-Hawaiian.svg &
-  352  gedit CasualTux-Hawaiian-Fade.svg CasualTux-Hawaiian-Multi.svg CasualTux-Hawaiian.svg &
-  353  ls
-  354  inkscape CasualTux-Hawaiian-Bright.svg CasualTux-Hawaiian-Fade.svg CasualTux-Hawaiian-Multi.svg &
-  355  cp CasualTux-Hawaiian-Fade.svg CasualTux-Hawaiian-Fade-Bold.svg
-  356  sed -i "s/stroke-width:9/stroke-width:1/" CasualTux-Hawaiian-Fade.svg
-  357  inkscape CasualTux-Hawaiian-Fade-Bold.svg CasualTux-Hawaiian-Fade.svg &
-  482  git clone git@github.com:casualtux/pattern-four-square.git
-  484  git clone git@github.com:casualtux/pattern-black-hawaiian.git
-  490  cp four-square.black.svg four-square.white.svg ../github/pattern-four-square/
-  494  cp Black-Hawaiian-large-tiled.svg ../../github/pattern-black-hawaiian/
-  497  cd github/
-  501  git clone git@github.com:casualtux/pattern-cth-square-back.git
+sed -i "s/stop-opacity:0/stop-opacity:1/" Black-Hawaiian.svg 
+sed -i "s/stroke-width:1/stroke-width:9/" Black-Hawaiian.svg 
 
+=== Stroke Colors ===
 
-  305  grep radialGradient38093-9-5-16-2 CasualTux-Hawaiian-Bright2.svg | sed "s/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#990033/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/"
-  306  grep radialGradient38093-9-5-16-2 CasualTux-Hawaiian-Bright2.svg | sed "s/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#990033/radialGradient38093-9-5-16-2);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" | grep ffffff
-  307  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" >> red.test; done
-  315  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" | sed "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" >> red.test2; done
-  318  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" | sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  319  cat red.radial | while read line; do grep $line CasualTux-Hawaiian-Bright2.svg | sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg | sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  322  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg  ; done
-  323  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  330  sed -i "s/stroke:#990033/stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg
-  335  sed -i "s/stroke:#990033;stroke-width:1/stroke:#990033;stroke-width:9/" CasualTux-Hawaiian-Bright2.svg
-  336  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg  ; done
-  337  cat red.radial | while read line; do sed -i "s/$line);fill-opacity:1;stroke:#990033/$line);fill-opacity:1;stroke:#ffffff/" CasualTux-Hawaiian-Bright2.svg ; done
-  338  sed -i "s/stroke:#990033/stroke:#cc0022/" CasualTux-Hawaiian-Bright2.svg
-  358  sed -i "s/stroke-width:9/stroke-width:1/" CasualTux-Hawaiian-Fade.svg
+grep -A 1 -B 1 linearGradient5397 Black-Hawaiian.svg | grep radial | awk -F'"' '{print $2}'| while read line; do echo $line ; sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033;/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;/" Black-Hawaiian.svg ; done
 
+grep -A 1 -B 1 linearGradient6719 Black-Hawaiian.svg | grep radial | awk -F'"' '{print $2}'| while read line; do echo $line ; sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033;/$line);fill-opacity:1;fill-rule:nonzero;stroke:#cc0022;/" Black-Hawaiian.svg ; done
 
+=== OR ===
+
+grep -A 1 -B 1 linearGradient6719 Black-Hawaiian.svg | grep radial | awk -F'"' '{print $2}'| while read line; do echo $line ; sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033;/$line);fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;/" Black-Hawaiian.svg ; done
+
+grep -A 1 -B 1 linearGradient5397 Black-Hawaiian.svg | grep radial | awk -F'"' '{print $2}'| while read line; do echo $line ; sed -i "s/$line);fill-opacity:1;fill-rule:nonzero;stroke:#990033;/$line);fill-opacity:1;fill-rule:nonzero;stroke:#cc0022;/" Black-Hawaiian.svg ; done
+
+=== END ===
