@@ -19,6 +19,8 @@
    sodipodi:docname="Black-Hawaiian.svg"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
+  <title
+   id="title5569">Black Hawaiian</title>
   <defs
      id="defs15836">
     <linearGradient
@@ -7840,7 +7842,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title>Black Hawaiian</dc:title>
         <dc:rights>
           <cc:Agent>
             <dc:title>The copyright holder of this file allows anyone to use it for any purpose, provided that the copyright holder is properly attributed. Redistribution, derivative work, commercial use, and all other use is permitted.</dc:title>
@@ -7858,10 +7860,10 @@
           </rdf:Bag>
         </dc:subject>
         <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
       </cc:Work>
       <cc:License
-         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
         <cc:permits
            rdf:resource="http://creativecommons.org/ns#Reproduction" />
         <cc:permits
